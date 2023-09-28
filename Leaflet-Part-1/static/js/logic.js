@@ -37,7 +37,7 @@ function createFeatures(features){
         color: colorVar, 
         opacity: 0.0,
         fillOpacity: 0.8
-    }).bindPopup(`<h3>${feature.properties.place}</h3><hr><p>${new Date(feature.properties.time)}</p><hr><p>Magnitude:${feature.properties.mag}</p>`).addTo(myMap);
+    }).bindPopup(`<h3>${feature.properties.place}</h3><hr><p>Depth:${feature.geometry.coordinates[2]} km</p><hr><p>Magnitude:${feature.properties.mag}</p>`).addTo(myMap);
 }};
 
 //Create our base street and topographical layers
